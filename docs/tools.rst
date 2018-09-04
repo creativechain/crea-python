@@ -1,7 +1,7 @@
 Tools
 ~~~~~
 
-``steem-python`` comes with batteries included.
+``dpay-python`` comes with batteries included.
 
 This page lists a collection of convenient tools at your disposal.
 
@@ -9,7 +9,7 @@ This page lists a collection of convenient tools at your disposal.
 Account
 =======
 
-.. autoclass:: steem.account.Account
+.. autoclass:: dpay.account.Account
    :members:
 
 --------
@@ -17,7 +17,7 @@ Account
 Amount
 ======
 
-.. autoclass:: steem.amount.Amount
+.. autoclass:: dpay.amount.Amount
    :members:
 
 --------
@@ -25,7 +25,7 @@ Amount
 Blockchain
 ==========
 
-.. autoclass:: steem.blockchain.Blockchain
+.. autoclass:: dpay.blockchain.Blockchain
    :members:
 
 --------
@@ -33,7 +33,7 @@ Blockchain
 Blog
 ====
 
-.. autoclass:: steem.blog.Blog
+.. autoclass:: dpay.blog.Blog
    :members:
 
 --------
@@ -41,7 +41,7 @@ Blog
 Converter
 =========
 
-.. autoclass:: steem.converter.Converter
+.. autoclass:: dpay.converter.Converter
    :members:
 
 --------
@@ -49,7 +49,7 @@ Converter
 Dex
 ===
 
-.. autoclass:: steem.dex.Dex
+.. autoclass:: dpay.dex.Dex
    :members:
 
 --------
@@ -57,17 +57,17 @@ Dex
 Post
 ====
 
-.. autoclass:: steem.post.Post
+.. autoclass:: dpay.post.Post
    :members:
 
 --------
 
 
 
-steem.utils
+dpay.utils
 ===========
 
-.. automodule:: steem.utils
+.. automodule:: dpay.utils
    :members:
 
 --------

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# steem-python documentation build configuration file, created by
+# dpay-python documentation build configuration file, created by
 # sphinx-quickstart on Mon Mar  6 14:00:07 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -57,9 +57,9 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'steem-python'
-copyright = '2018, Steemit Inc'
-author = 'cyonic@steemit.com'
+project = 'dpay-python'
+copyright = '2018, dPay DAO'
+author = 'jared@benchx.io'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -110,7 +110,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'steem-pythondoc'
+htmlhelp_basename = 'dpay-pythondoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -136,15 +136,15 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'steem-python.tex', 'steem-python Documentation',
-     'furion@steemit.com', 'manual'),
+    (master_doc, 'dpay-python.tex', 'dpay-python Documentation',
+     'jared@benchx.io', 'manual'),
 ]
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, 'steem-python', 'steem-python Documentation',
+man_pages = [(master_doc, 'dpay-python', 'dpay-python Documentation',
               [author], 1)]
 
 # -- Options for Texinfo output -------------------------------------------
@@ -153,6 +153,6 @@ man_pages = [(master_doc, 'steem-python', 'steem-python Documentation',
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'steem-python', 'steem-python Documentation', author,
-     'steem-python', 'One line description of project.', 'Miscellaneous'),
+    (master_doc, 'dpay-python', 'dpay-python Documentation', author,
+     'dpay-python', 'One line description of project.', 'Miscellaneous'),
 ]

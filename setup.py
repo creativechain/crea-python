@@ -13,11 +13,11 @@ from setuptools import find_packages, setup, Command
 from setuptools.command.test import test as TestCommand
 
 # Package meta-data.
-NAME = 'steem'
-DESCRIPTION = 'Official python steem library.'
-URL = 'https://github.com/steemit/steem-python'
-EMAIL = 'john@steemit.com'
-AUTHOR = 'Steemit'
+NAME = 'dpay'
+DESCRIPTION = 'Official python dPay library.'
+URL = 'https://github.com/dpays/dpay-python'
+EMAIL = 'jared@benchx.io'
+AUTHOR = 'dPay DAO'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -133,7 +133,7 @@ setup(
     name=NAME,
     version='1.0.1',
     description=DESCRIPTION,
-    keywords=['steem', 'steemit', 'cryptocurrency', 'blockchain'],
+    keywords=['dpay', 'dsite', 'cryptocurrency', 'blockchain'],
     # long_description=long_description,
     author=AUTHOR,
     author_email=EMAIL,
@@ -141,9 +141,9 @@ setup(
     packages=find_packages(exclude=('tests','scripts')),
     entry_points={
             'console_scripts': [
-                'piston=steem.cli:legacyentry',
-                'steempy=steem.cli:legacyentry',
-                'steemtail=steem.cli:steemtailentry',
+                'dpaypy=dpay.cli:legacyentry',
+                'dpaycli=dpay.cli:legacyentry',
+                'dpaytail=dpay.cli:dpaytailentry',
             ],
     },
     install_requires=REQUIRED,

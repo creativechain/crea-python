@@ -6,8 +6,8 @@
       "feed_publish",
       {
         "exchange_rate": {
-          "quote": "1.000 STEEM",
-          "base": "0.374 SBD"
+          "quote": "1.000 BEX",
+          "base": "0.374 BBD"
         },
         "publisher": "smooth.witness"
       }
@@ -19,5 +19,3 @@
   "ref_block_num": 19946,
   "extensions": []
 }
-
-    

@@ -1,86 +1,86 @@
-steempy CLI
+dpaycli CLI
 ~~~~~~~~~~~
-`steempy` is a convenient CLI utility that enables you to manage your wallet, transfer funds, check
+`dpaycli` is a convenient CLI utility that enables you to manage your wallet, transfer funds, check
 balances and more.
 
 Using the Wallet
 ----------------
-`steempy` lets you leverage your BIP38 encrypted wallet to perform various actions on your accounts.
+`dpaycli` lets you leverage your BIP38 encrypted wallet to perform various actions on your accounts.
 
-The first time you use `steempy`, you will be prompted to enter a password. This password will be used to encrypt
-the `steempy` wallet, which contains your private keys.
+The first time you use `dpaycli`, you will be prompted to enter a password. This password will be used to encrypt
+the `dpaycli` wallet, which contains your private keys.
 
 You can change the password via `changewalletpassphrase` command.
 
 ::
 
-    steempy changewalletpassphrase
+    dpaycli changewalletpassphrase
 
 
 From this point on, every time an action requires your private keys, you will be prompted to enter
-this password (from CLI as well as while using `steem` library).
+this password (from CLI as well as while using `dpay` library).
 
 To bypass password entry, you can set an environmnet variable ``UNLOCK``.
 
 ::
 
-    UNLOCK=mysecretpassword steempy transfer 100 STEEM <recipient>
+    UNLOCK=mysecretpassword dpaycli transfer 100 BEX <recipient>
 
 Common Commands
 ---------------
-First, you may like to import your Steem account:
+First, you may like to import your dPay account:
 
 ::
 
-    steempy importaccount
+    dpaycli importaccount
 
 
 You can also import individual private keys:
 
 ::
 
-   steempy addkey <private_key>
+   dpaycli addkey <private_key>
 
 Listing accounts:
 
 ::
 
-   steempy listaccounts
+   dpaycli listaccounts
 
 Show balances:
 
 ::
 
-   steempy balance account_name1 account_name2
+   dpaycli balance account_name1 account_name2
 
 Sending funds:
 
 ::
 
-   steempy transfer --account <account_name> 100 STEEM <recipient_name> memo
+   dpaycli transfer --account <account_name> 100 BEX <recipient_name> memo
 
 Upvoting a post:
 
 ::
 
-   steempy upvote --account <account_name> https://steemit.com/funny/@mynameisbrian/the-content-stand-a-comic
+   dpaycli upvote --account <account_name> https://dsite.io/funny/@jared/test-post
 
 
 Setting Defaults
 ----------------
-For a more convenient use of ``steempy`` as well as the ``steem`` library, you can set some defaults.
-This is especially useful if you have a single Steem account.
+For a more convenient use of ``dpaycli`` as well as the ``dpay`` library, you can set some defaults.
+This is especially useful if you have a single dPay account.
 
 ::
 
-   steempy set default_account furion
-   steempy set default_vote_weight 100
+   dpaycli set default_account jared
+   dpaycli set default_vote_weight 100
 
-   steempy config
+   dpaycli config
     +---------------------+--------+
     | Key                 | Value  |
     +---------------------+--------+
-    | default_account     | furion |
+    | default_account     | jared  |
     | default_vote_weight | 100    |
     +---------------------+--------+
 
@@ -88,29 +88,29 @@ If you've set up your `default_account`, you can now send funds by omitting this
 
 ::
 
-    steempy transfer 100 STEEM <recipient_name> memo
+    dpaycli transfer 100 BEX <recipient_name> memo
 
 
 Help
 ----
-You can see all available commands with ``steempy -h``
+You can see all available commands with ``dpaycli -h``
 
 ::
 
-    ~ % steempy -h
-    usage: steempy [-h] [--node NODE] [--no-broadcast] [--no-wallet] [--unsigned]
+    ~ % dpaycli -h
+    usage: dpaycli [-h] [--node NODE] [--no-broadcast] [--no-wallet] [--unsigned]
                    [--expires EXPIRES] [--verbose VERBOSE] [--version]
-                   {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,convert,balance,interest,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,resteem,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
+                   {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,convert,balance,interest,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,repost,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
                    ...
 
-    Command line tool to interact with the Steem network
+    Command line tool to interact with the dPay network
 
     positional arguments:
-      {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,convert,balance,interest,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,resteem,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
+      {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,convert,balance,interest,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,repost,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
                             sub-command help
         set                 Set configuration
         config              Show local configuration
-        info                Show basic STEEM blockchain info
+        info                Show basic dPay blockchain info
         changewalletpassphrase
                             Change wallet password
         addkey              Add a new key to the wallet
@@ -120,11 +120,11 @@ You can see all available commands with ``steempy -h``
         listaccounts        List available accounts in your wallet
         upvote              Upvote a post
         downvote            Downvote a post
-        transfer            Transfer STEEM
-        powerup             Power up (vest STEEM as STEEM POWER)
-        powerdown           Power down (start withdrawing STEEM from steem POWER)
+        transfer            Transfer BEX
+        powerup             Power up (vest BEX as BEX POWER)
+        powerdown           Power down (start withdrawing BEX from BEX POWER)
         powerdownroute      Setup a powerdown route
-        convert             Convert STEEMDollars to Steem (takes a week to settle)
+        convert             Convert BEX Dollars to BEX (takes a week to settle)
         balance             Show the balance of one more more accounts
         interest            Get information about interest payment
         permissions         Show permissions of an account
@@ -140,10 +140,10 @@ You can see all available commands with ``steempy -h``
                             required keys
         broadcast           broadcast a signed transaction
         orderbook           Obtain orderbook of the internal market
-        buy                 Buy STEEM or SBD from the internal market
-        sell                Sell STEEM or SBD from the internal market
+        buy                 Buy BEX or BBD from the internal market
+        sell                Sell BEX or BBD from the internal market
         cancel              Cancel order in the internal market
-        resteem             Resteem an existing post
+        repost             Repost an existing post
         follow              Follow another account
         unfollow            unfollow another account
         setprofile          Set a variable in an account's profile
@@ -153,8 +153,8 @@ You can see all available commands with ``steempy -h``
 
     optional arguments:
       -h, --help            show this help message and exit
-      --node NODE           URL for public Steem API (default:
-                            "https://api.steemit.com")
+      --node NODE           URL for public dPay API (default:
+                            "https://api.dpays.io")
       --no-broadcast, -d    Do not broadcast anything
       --no-wallet, -p       Do not load the wallet
       --unsigned, -x        Do not try to sign the transaction
@@ -163,4 +163,3 @@ You can see all available commands with ``steempy -h``
       --verbose VERBOSE, -v VERBOSE
                             Verbosity
       --version             show program's version number and exit
-

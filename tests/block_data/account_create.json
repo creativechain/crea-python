@@ -10,36 +10,36 @@
           "account_auths": [],
           "key_auths": [
             [
-              "STM8MN3FNBa8WbEpxz3wGL3L1mkt6sGnncH8iuto7r8Wa3T9NSSGT",
+              "DWB8MN3FNBa8WbEpxz3wGL3L1mkt6sGnncH8iuto7r8Wa3T9NSSGT",
               1
             ]
           ]
         },
-        "memo_key": "STM6Gkj27XMkoGsr4zwEvkjNhh4dykbXmPFzHhT8g86jWsqu3U38X",
+        "memo_key": "DWB6Gkj27XMkoGsr4zwEvkjNhh4dykbXmPFzHhT8g86jWsqu3U38X",
         "active": {
           "weight_threshold": 1,
           "account_auths": [],
           "key_auths": [
             [
-              "STM8HCf7QLUexogEviN8x1SpKRhFwg2sc8LrWuJqv7QsmWrua6ZyR",
+              "DWB8HCf7QLUexogEviN8x1SpKRhFwg2sc8LrWuJqv7QsmWrua6ZyR",
               1
             ]
           ]
         },
-        "new_account_name": "fabian",
+        "new_account_name": "stan",
         "posting": {
           "weight_threshold": 1,
           "account_auths": [],
           "key_auths": [
             [
-              "STM8EhGWcEuQ2pqCKkGHnbmcTNpWYZDjGTT7ketVBp4gUStDr2brz",
+              "DWB8EhGWcEuQ2pqCKkGHnbmcTNpWYZDjGTT7ketVBp4gUStDr2brz",
               1
             ]
           ]
         },
         "creator": "hello",
         "json_metadata": "{}",
-        "fee": "0.000 STEEM"
+        "fee": "0.000 BEX"
       }
     ]
   ],

@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = steem-python
+SPHINXPROJ    = dpay-python
 SOURCEDIR     = .
 BUILDDIR      = _build
 _README        = ../README.rst

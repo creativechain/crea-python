@@ -6,8 +6,8 @@
       "limit_order_create",
       {
         "owner": "adm",
-        "amount_to_sell": "5.000 STEEM",
-        "min_to_receive": "1.542 SBD",
+        "amount_to_sell": "5.000 BEX",
+        "min_to_receive": "1.542 BBD",
         "orderid": 9,
         "fill_or_kill": false,
         "expiration": "2016-07-01T13:34:03"
@@ -20,5 +20,3 @@
   "ref_block_num": 969,
   "extensions": []
 }
-
-    

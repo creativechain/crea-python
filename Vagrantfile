@@ -17,6 +17,6 @@ Vagrant.configure("2") do |config|
      apt-get install -y libssl-dev
      apt-get install -y python3-pip
      cd /vagrant && make test
-     steempy info
+     dpaycli info
   SHELL
 end

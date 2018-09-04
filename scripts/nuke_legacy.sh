@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-pip uninstall piston-steem -y
-pip uninstall python-steem -y
-pip uninstall steem-python -y
-pip uninstall steem-piston -y
-pip uninstall steem -y
+pip uninstall dpaypy -y
+pip uninstall dpay-python -y
+pip uninstall dpay -y
 pip uninstall graphenelib -y
-pip uninstall piston-cli -y
+pip uninstall dpay-cli -y

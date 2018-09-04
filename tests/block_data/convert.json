@@ -5,7 +5,7 @@
     [
       'convert',
       {
-        'amount': '5.000 SBD',
+        'amount': '5.000 BBD',
         'owner': 'summon',
         'requestid': 1467592156
       }

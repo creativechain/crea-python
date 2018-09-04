@@ -4,16 +4,16 @@ Examples
 Syncing Blockchain to a Flat File
 =================================
 
-Here is a relatively simple script built on top of ``steem-python`` that will let you sync
-STEEM blockchain into a simple file.
+Here is a relatively simple script built on top of ``dpay-python`` that will let you sync
+dPay blockchain into a simple file.
 You can run this script as many times as you like, and it will continue from the last block it synced.
 
     ::
 
         import json
         import os
-        
-        from steem.blockchain import Blockchain
+
+        from dpay.blockchain import Blockchain
 
 
         def get_last_line(filename):
@@ -52,7 +52,7 @@ You can run this script as many times as you like, and it will continue from the
 
 
         if __name__ == '__main__':
-            output_file = '/home/user/Downloads/steem.blockchain.json'
+            output_file = '/home/user/Downloads/dpay.blockchain.json'
             try:
                 run(output_file)
             except KeyboardInterrupt:
@@ -64,7 +64,7 @@ To see how many blocks we currently have, we can simply perform a line count.
     ::
 
 
-        wc -l steem.blockchain.json
+        wc -l dpay.blockchain.json
 
 
 We can also inspect an arbitrary block, and pretty-print it.
@@ -72,7 +72,7 @@ We can also inspect an arbitrary block, and pretty-print it.
 
     ::
 
-        sed '10000q;d' steem.blockchain.json | python -m json.tool
+        sed '10000q;d' dpay.blockchain.json | python -m json.tool
 
 
 
@@ -80,37 +80,37 @@ Witness Killswitch
 ==================
 
 Occasionally things go wrong: software crashes, servers go down...
-One of the main roles for STEEM witnesses is to reliably mint blocks.
+One of the main roles for dPay witnesses is to reliably mint blocks.
 This script acts as a kill-switch to protect the network from missed blocks and
 prevents embarrassment when things go totally wrong.
 
     ::
 
         import time
-        from steem import Steem
+        from dpay import DPay
 
-        steem = Steem()
+        dpay = DPay()
 
         # variables
         disable_after = 10  # disable witness after 10 blocks are missed
-        witness_name = 'furion'
-        witness_url = "https://steemit.com/steemit/@furion/power-down-no-more"
+        witness_name = 'jared'
+        witness_url = "https://dsite.io/dsite/@jared/test-post"
         witness_props = {
-            "account_creation_fee": "0.500 STEEM",
+            "account_creation_fee": "0.500 BEX",
             "maximum_block_size": 65536,
-            "sbd_interest_rate": 15,
+            "bbd_interest_rate": 15,
         }
 
 
         def total_missed():
-            return steem.get_witness_by_account(witness_name)['total_missed']
+            return dpay.get_witness_by_account(witness_name)['total_missed']
 
 
         if __name__ == '__main__':
             treshold = total_missed() + disable_after
             while True:
                 if total_missed() > treshold:
-                    tx = steem.commit.witness_update(
+                    tx = dpay.commit.witness_update(
                         signing_key=None,
                         url=witness_url,
                         props=witness_props,
@@ -131,27 +131,27 @@ This script will also teach us how to create and sign transactions ourselves.
 
     ::
 
-        from steem.transactionbuilder import TransactionBuilder
-        from steembase import operations
+        from dpay.transactionbuilder import TransactionBuilder
+        from dpaybase import operations
 
         # lets create 3 transfers, to 3 different people
         transfers = [
             {
                 'from': 'richguy',
                 'to': 'recipient1',
-                'amount': '0.001 STEEM',
+                'amount': '0.001 BEX',
                 'memo': 'Test Transfer 1'
             },
             {
                 'from': 'richguy',
                 'to': 'recipient2',
-                'amount': '0.002 STEEM',
+                'amount': '0.002 BEX',
                 'memo': 'Test Transfer 2'
             },
             {
                 'from': 'richguy',
                 'to': 'recipient3',
-                'amount': '0.003 STEEM',
+                'amount': '0.003 BEX',
                 'memo': 'Test Transfer 3'
             }
 
@@ -162,7 +162,7 @@ This script will also teach us how to create and sign transactions ourselves.
         # we don't want to really send funds, just testing.
         tb = TransactionBuilder(no_broadcast=True)
 
-        # lets serialize our transfers into a format Steem can understand
+        # lets serialize our transfers into a format dPay can understand
         operations = [operations.Transfer(**x) for x in transfers]
 
         # tell TransactionBuilder to use our serialized transfers
@@ -177,7 +177,7 @@ This script will also teach us how to create and sign transactions ourselves.
         # sign the transaction
         tb.sign()
 
-        # broadcast the transaction (publish to steem)
+        # broadcast the transaction (publish to dPay)
         # since we specified no_broadcast=True earlier
         # this method won't actually do anything
         tx = tb.broadcast()
@@ -186,18 +186,18 @@ Simple Voting Bot
 =================
 
 Here is a simple bot that will reciprocate by upvoting all new posts that mention us.
-Make sure to set ``whoami`` to your Steem username before running.
+Make sure to set ``whoami`` to your dPay username before running.
 
     ::
 
-        from steem.blockchain import Blockchain
-        from steem.post import Post
+        from dpay.blockchain import Blockchain
+        from dpay.post import Post
 
 
         def run():
             # upvote posts with 30% weight
             upvote_pct = 30
-            whoami = 'my-steem-username'
+            whoami = 'my-dpay-username'
 
             # stream comments as they are published on the blockchain
             # turn them into convenient Post objects while we're at it

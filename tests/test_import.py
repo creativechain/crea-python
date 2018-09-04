@@ -3,11 +3,11 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
-from steem import *  # noqa
-from steembase import *  # noqa
+from dpay import *  # noqa
+from dpaybase import *  # noqa
 
 
 # pylint: disable=unused-import,unused-variable
 def test_import():
-    _ = Steem()
+    _ = DPay()
     _ = account.PasswordKey

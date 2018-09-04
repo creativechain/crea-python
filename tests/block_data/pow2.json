@@ -89,8 +89,8 @@
           }
         ],
         "props": {
-          "account_creation_fee": "0.001 STEEM",
-          "sbd_interest_rate": 1000,
+          "account_creation_fee": "0.001 BEX",
+          "bbd_interest_rate": 1000,
           "maximum_block_size": 131072
         }
       }
