@@ -14,7 +14,7 @@ from setuptools.command.test import test as TestCommand
 
 # Package meta-data.
 NAME = 'dpay'
-DESCRIPTION = 'Official python dPay library.'
+DESCRIPTION = 'Official Python dPay library.'
 URL = 'https://github.com/dpays/dpay-python'
 EMAIL = 'jared@benchx.io'
 AUTHOR = 'dPay DAO'
@@ -131,7 +131,7 @@ class UploadCommand(Command):
 # Where the magic happens:
 setup(
     name=NAME,
-    version='1.0.1',
+    version='0.1.1',
     description=DESCRIPTION,
     keywords=['dpay', 'dsite', 'cryptocurrency', 'blockchain'],
     # long_description=long_description,
