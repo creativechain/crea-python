@@ -4,4 +4,4 @@ pip uninstall dpaypy -y
 pip uninstall dpay-python -y
 pip uninstall dpay -y
 pip uninstall graphenelib -y
-pip uninstall dpay-cli -y
+pip uninstall dpaycli -y
