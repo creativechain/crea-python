@@ -580,12 +580,12 @@ def legacyentry():
     """
     parser_repost = subparsers.add_parser(
         'repost', help='Repost an existing post')
-    parser_redpay.set_defaults(command="repost")
-    parser_redpay.add_argument(
+    parser_repost.set_defaults(command="repost")
+    parser_repost.add_argument(
         'identifier',
         type=str,
         help='author/permlink-identifier of the post to repost')
-    parser_redpay.add_argument(
+    parser_repost.add_argument(
         '--account',
         type=str,
         required=False,
