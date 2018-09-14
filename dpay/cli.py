@@ -46,7 +46,7 @@ def legacyentry():
         '--node',
         type=str,
         default=configStorage["node"],
-        help='URL for public dPay API (default: "https://api.dpays.io")'
+        help='URL for public dPay API (default: "https://dpayd.dpays.io")'
     )
 
     parser.add_argument(

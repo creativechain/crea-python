@@ -138,21 +138,21 @@ and shall contain no whitespaces.
         | default_vote_weight | 100          |
         | default_account     | nomoreheroes |
         +---------------------+--------------+
-        ~ % dpaycli set nodes https://greatchain.dpays.io/
+        ~ % dpaycli set nodes https://dpayd.dpays.io/
         ~ % dpaycli config
         +---------------------+-------------------------------+
         | Key                 | Value                         |
         +---------------------+-------------------------------+
         | default_account     | nomoreheroes                  |
         | default_vote_weight | 100                           |
-        | nodes               | https://greatchain.dpays.io/  |
+        | nodes               | https://dpayd.dpays.io/           |
         +---------------------+-------------------------------+
-        ~ % dpaycli set nodes https://greatchain.dpays.io/,https://api.dpays.io
+        ~ % dpaycli set nodes https://dpayd.dpays.io/,https://dpayd.dpays.io
         ~ % dpaycli config
         +---------------------+----------------------------------------------------------+
         | Key                 | Value                                                    |
         +---------------------+----------------------------------------------------------+
-        | nodes               | https://greatchain.dpays.io/,https://api.dpays.io        |
+        | nodes               | https://dp/,https://dpayd.dpays.io        |
         | default_vote_weight | 100                                                      |
         | default_account     | nomoreheroes                                             |
         +---------------------+----------------------------------------------------------+
@@ -172,8 +172,8 @@ Post, etc) will use this as their default instance.
         from dpay.instance import set_shared_dpayd_instance
 
         dpayd_nodes = [
-            'https://greatchain.dpays.io',
-            'https://api.dpays.io',
+            'https://dpayd.dpays.io',
+            'https://dpayd.dpays.io',
         ]
         set_shared_dpayd_instance(DPayd(nodes=dpayd_nodes))
 
@@ -191,8 +191,8 @@ This is useful when you want to contain a modified ``dpayd`` instance to an expl
         from dpay.Blockchain import Blockchain
 
         dpayd_nodes = [
-            'https://greatchain.dpays.io',
-            'https://api.dpays.io',
+            'https://dpayd.dpays.io',
+            'https://dpayd.dpays.io',
         ]
         custom_instance = DPayd(nodes=dpayd_nodes)
 

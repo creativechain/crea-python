@@ -37,8 +37,8 @@ class HttpClient(object):
 
        from dpay.http_client import HttpClient
 
-       rpc = HttpClient(['https://api.dpays.io',
-       'https://api.dpaydev.io'])
+       rpc = HttpClient(['https://dpayd.dpays.io',
+       'https://d.dpaydev.io'])
 
     any call available to that port can be issued using the instance
     via the syntax ``rpc.call('command', *parameters)``.
@@ -336,11 +336,11 @@ class HttpClient(object):
         This will fail loudly in the event that incorrect input has been passed.
 
         There are three types of input allowed when defining nodes.
-        1. a string of a single node url. ie nodes='https://api.dpays.io'
+        1. a string of a single node url. ie nodes='https://dpayd.dpays.io'
         2. a comma separated string of several node url's.
-            nodes='https://api.dpays.io,<<community node>>,<<your personal node>>'
+            nodes='https://dpayd.dpays.io,<<community node>>,<<your personal node>>'
         3. a list of string node url's.
-            nodes=['https://api.dpays.io','<<community node>>','<<your personal node>>']
+            nodes=['https://dpayd.dpays.io','<<community node>>','<<your personal node>>']
 
         Any other input will result in a ValueError being thrown.
 

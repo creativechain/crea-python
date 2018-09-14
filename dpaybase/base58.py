@@ -12,8 +12,7 @@ PREFIX = "DWB"
 
 known_prefixes = [
     PREFIX,
-    "GLS",
-    "TST",
+    "DWT",
 ]
 
 

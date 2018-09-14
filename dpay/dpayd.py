@@ -42,8 +42,8 @@ class DPayd(HttpClient):
            .. code-block:: python
 
                nodes = [
-                   'https://dpaypd.yournode1.com',
-                   'https://dpaypd.yournode2.com',
+                   'https://d.yournode1.com',
+                   'https://d.yournode2.com',
                ]
 
                s = DPayd(nodes)
@@ -52,7 +52,7 @@ class DPayd(HttpClient):
 
     def __init__(self, nodes=None, **kwargs):
         if not nodes:
-            nodes = get_config_node_list() or ['https://api.dpays.io']
+            nodes = get_config_node_list() or ['https://dpayd.dpays.io']
 
         super(DPayd, self).__init__(nodes, **kwargs)
 
@@ -681,25 +681,25 @@ class DPayd(HttpClient):
                    {'base': '513.571 BEX', 'quote': '50.000 BBD'},
                    'real_price': '0.09735752213423265',
                    'bbd': 50000,
-                   'bex': 513571},
+                   'dpay': 513571},
                   {'created': '2017-03-06T21:01:39',
                    'order_price':
                    {'base': '63.288 BEX', 'quote': '6.204 BBD'},
                    'real_price': '0.09802806219188472',
                    'bbd': 6204,
-                   'bex': 63288}],
+                   'dpay': 63288}],
                  'bids': [{'created': '2017-03-06T21:29:51',
                    'order_price':
                    {'base': '50.000 BBD', 'quote': '516.503 BEX'},
                    'real_price': '0.09680485882947436',
                    'bbd': 50000,
-                   'bex': 516503},
+                   'dpay': 516503},
                   {'created': '2017-03-06T17:30:24',
                    'order_price':
                    {'base': '36.385 BBD', 'quote': '379.608 BEX'},
                    'real_price': '0.09584887568228277',
                    'bbd': 36385,
-                   'bex': 379608}]}
+                   'dpay': 379608}]}
 
 
         """

@@ -1,4 +1,4 @@
-# Official Python dPay Library
+# Official dPay Python Library
 
 `dpay-python` is the official dPay library for Python. It comes with a
 BIP38 encrypted wallet and a practical CLI utility called `dpaycli`.

@@ -131,7 +131,7 @@ class UploadCommand(Command):
 # Where the magic happens:
 setup(
     name=NAME,
-    version='0.1.2',
+    version='0.1.8',
     description=DESCRIPTION,
     keywords=['dpay', 'dsite', 'cryptocurrency', 'blockchain'],
     # long_description=long_description,

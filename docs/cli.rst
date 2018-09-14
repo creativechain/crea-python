@@ -154,7 +154,7 @@ You can see all available commands with ``dpaycli -h``
     optional arguments:
       -h, --help            show this help message and exit
       --node NODE           URL for public dPay API (default:
-                            "https://api.dpays.io")
+                            "https://dpayd.dpays.io")
       --no-broadcast, -d    Do not broadcast anything
       --no-wallet, -p       Do not load the wallet
       --unsigned, -x        Do not try to sign the transaction
