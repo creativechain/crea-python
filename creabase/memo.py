@@ -12,7 +12,7 @@ from .base58 import base58encode, base58decode
 from .account import PrivateKey, PublicKey
 from crea.utils import compat_bytes
 
-default_prefix = "DWB"
+default_prefix = "CREA"
 
 
 def get_shared_secret(priv, pub):

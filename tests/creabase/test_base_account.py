@@ -329,18 +329,18 @@ class Testcases(unittest.TestCase):
             "Tech5iir0aP6waiMeiHoph3iwoch4iijoogh0zoh9aSh6Ueb2Dee5dang1aa8IiP"
         ]
         b = [
-            "DWB5NyCrrXHmdikC6QPRAPoDjSHVQJe3WC5bMZuF6YhqhSsfYfjhN",
-            "DWB8gyvJtYyv5ZbT2ZxbAtgufQ5ovV2bq6EQp4YDTzQuSwyg7Ckry",
-            "DWB7yE71iVPSpaq8Ae2AmsKfyFxA8pwYv5zgQtCnX7xMwRUQMVoGf",
-            "DWB5jRgWA2kswPaXsQNtD2MMjs92XfJ1TYob6tjHtsECg2AusF5Wo",
-            "DWB6XHwVxcP6zP5NV1jUbG6Kso9m8ZG9g2CjDiPcZpAxHngx6ATPB",
-            "DWB59X1S4ofTAeHd1iNHDGxim5GkLo2AdcznksUsSYGU687ywB5WV",
-            "DWB6BPPL4iSRbFVVN8v3BEEEyDsC1STRK7Ba9ewQ4Lqvszn5J8VAe",
-            "DWB7cdK927wj95ptUrCk6HKWVeF74LG5cTjDTV22Z3yJ4Xw8xc9qp",
-            "DWB7VNFRjrE1hs1CKpEAP9NAabdFpwvzYXRKvkrVBBv2kTQCbNHz7",
-            "DWB7ZZFhEBjujcKjkmY31i1spPMx6xDSRhkursZLigi2HKLuALe5t",
+            "CREA5NyCrrXHmdikC6QPRAPoDjSHVQJe3WC5bMZuF6YhqhSsfYfjhN",
+            "CREA8gyvJtYyv5ZbT2ZxbAtgufQ5ovV2bq6EQp4YDTzQuSwyg7Ckry",
+            "CREA7yE71iVPSpaq8Ae2AmsKfyFxA8pwYv5zgQtCnX7xMwRUQMVoGf",
+            "CREA5jRgWA2kswPaXsQNtD2MMjs92XfJ1TYob6tjHtsECg2AusF5Wo",
+            "CREA6XHwVxcP6zP5NV1jUbG6Kso9m8ZG9g2CjDiPcZpAxHngx6ATPB",
+            "CREA59X1S4ofTAeHd1iNHDGxim5GkLo2AdcznksUsSYGU687ywB5WV",
+            "CREA6BPPL4iSRbFVVN8v3BEEEyDsC1STRK7Ba9ewQ4Lqvszn5J8VAe",
+            "CREA7cdK927wj95ptUrCk6HKWVeF74LG5cTjDTV22Z3yJ4Xw8xc9qp",
+            "CREA7VNFRjrE1hs1CKpEAP9NAabdFpwvzYXRKvkrVBBv2kTQCbNHz7",
+            "CREA7ZZFhEBjujcKjkmY31i1spPMx6xDSRhkursZLigi2HKLuALe5t",
         ]
         for i, pwd in enumerate(a):
             p = format(
-                PasswordKey("jared", pwd, "posting").get_public(), "DWB")
+                PasswordKey("jared", pwd, "posting").get_public(), "CREA")
             self.assertEqual(p, b[i])

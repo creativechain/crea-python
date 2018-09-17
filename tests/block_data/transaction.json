@@ -37,7 +37,7 @@
             "account_creation_fee": "1.000 CREA",
             "cbd_interest_rate": 1000
           },
-          "block_signing_key": "DWB5b3wkzd5cPuW8tYbHpsM6qo26R5eympAQsBaoEfeMDxxUCLvsY",
+          "block_signing_key": "CREA5b3wkzd5cPuW8tYbHpsM6qo26R5eympAQsBaoEfeMDxxUCLvsY",
           "fee": "0.000 CREA",
           "owner": "supercomputing06"
         }
@@ -56,15 +56,15 @@
         {
           "json_metadata": "",
           "account": "supercomputing06",
-          "memo_key": "DWB7myUzFgMrc5w2jRc3LH2cTwcs96q74Kj6GJ3DyKHyrHFPDP96N",
+          "memo_key": "CREA7myUzFgMrc5w2jRc3LH2cTwcs96q74Kj6GJ3DyKHyrHFPDP96N",
           "active": {
             "key_auths": [
               [
-                "DWB5sP9GUuExPzK35F1MLjN2dTY7fqqP7dSpMWqnzCoU3je64gm6q",
+                "CREA5sP9GUuExPzK35F1MLjN2dTY7fqqP7dSpMWqnzCoU3je64gm6q",
                 2
               ],
               [
-                "DWB7t97bmNzbVruhH3yGQ7yFR58UJyPTb7Jh6ugmPfH1zqzJpngQH",
+                "CREA7t97bmNzbVruhH3yGQ7yFR58UJyPTb7Jh6ugmPfH1zqzJpngQH",
                 1
               ]
             ],
@@ -87,15 +87,15 @@
         {
           "json_metadata": "",
           "account": "supercomputing06",
-          "memo_key": "DWB7myUzFgMrc5w2jRc3LH2cTwcs96q74Kj6GJ3DyKHyrHFPDP96N",
+          "memo_key": "CREA7myUzFgMrc5w2jRc3LH2cTwcs96q74Kj6GJ3DyKHyrHFPDP96N",
           "active": {
             "key_auths": [
               [
-                "DWB5sP9GUuExPzK35F1MLjN2dTY7fqqP7dSpMWqnzCoU3je64gm6q",
+                "CREA5sP9GUuExPzK35F1MLjN2dTY7fqqP7dSpMWqnzCoU3je64gm6q",
                 2
               ],
               [
-                "DWB7t97bmNzbVruhH3yGQ7yFR58UJyPTb7Jh6ugmPfH1zqzJpngQH",
+                "CREA7t97bmNzbVruhH3yGQ7yFR58UJyPTb7Jh6ugmPfH1zqzJpngQH",
                 1
               ]
             ],

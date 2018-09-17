@@ -1,9 +1,9 @@
-default_prefix = "DWB"
+default_prefix = "CREA"
 
 known_chains = {
     "CREA": {
         "chain_id": "38f14b346eb697ba04ae0f5adcfaa0a437ed3711197704aa256a14cb9b4a8f26",
-        "prefix": "DWB",
+        "prefix": "CREA",
         "crea_symbol": "CREA",
         "cbd_symbol": "CBD",
         "vests_symbol": "VESTS",

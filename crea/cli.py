@@ -857,7 +857,7 @@ def legacyentry():
                 except:  # noqa FIXME(sneak)
                     pass
             # Public Key
-            elif re.match("^DWB.{48,55}$", obj):
+            elif re.match("^CREA.{48,55}$", obj):
                 account = crea.commit.wallet.getAccountFromPublicKey(obj)
                 if account:
                     t = PrettyTable(["Account"])
@@ -1074,7 +1074,7 @@ def legacyentry():
                 text="Password for Key Derivation: ", confirm=True)
             args.foreign_account = format(
                 PasswordKey(args.account, pwd, args.permission).get_public(),
-                "DWB")
+                "CREA")
         print_json(
             crea.commit.allow(
                 args.foreign_account,
@@ -1100,7 +1100,7 @@ def legacyentry():
                 confirm=True,
                 allowedempty=False)
             memo_key = PasswordKey(args.account, pw, "memo")
-            args.key = format(memo_key.get_public_key(), "DWB")
+            args.key = format(memo_key.get_public_key(), "CREA")
             memo_privkey = memo_key.get_private_key()
             # Add the key to the wallet
             if not args.no_broadcast:
@@ -1138,7 +1138,7 @@ def legacyentry():
 
         if "owner" in args.roles:
             owner_key = PasswordKey(args.account, password, role="owner")
-            owner_pubkey = format(owner_key.get_public_key(), "DWB")
+            owner_pubkey = format(owner_key.get_public_key(), "CREA")
             if owner_pubkey in [x[0] for x in account["owner"]["key_auths"]]:
                 print("Importing owner key!")
                 owner_privkey = owner_key.get_private_key()
@@ -1147,7 +1147,7 @@ def legacyentry():
 
         if "active" in args.roles:
             active_key = PasswordKey(args.account, password, role="active")
-            active_pubkey = format(active_key.get_public_key(), "DWB")
+            active_pubkey = format(active_key.get_public_key(), "CREA")
             if active_pubkey in [x[0] for x in account["active"]["key_auths"]]:
                 print("Importing active key!")
                 active_privkey = active_key.get_private_key()
@@ -1156,7 +1156,7 @@ def legacyentry():
 
         if "posting" in args.roles:
             posting_key = PasswordKey(args.account, password, role="posting")
-            posting_pubkey = format(posting_key.get_public_key(), "DWB")
+            posting_pubkey = format(posting_key.get_public_key(), "CREA")
             if posting_pubkey in [
                 x[0] for x in account["posting"]["key_auths"]
             ]:
@@ -1167,7 +1167,7 @@ def legacyentry():
 
         if "memo" in args.roles:
             memo_key = PasswordKey(args.account, password, role="memo")
-            memo_pubkey = format(memo_key.get_public_key(), "DWB")
+            memo_pubkey = format(memo_key.get_public_key(), "CREA")
             if memo_pubkey == account["memo_key"]:
                 print("Importing memo key!")
                 memo_privkey = memo_key.get_private_key()

@@ -8,7 +8,7 @@ from crea.utils import compat_bytes
 log = logging.getLogger(__name__)
 
 """ Default Prefix """
-PREFIX = "DWB"
+PREFIX = "CREA"
 
 known_prefixes = [
     PREFIX,

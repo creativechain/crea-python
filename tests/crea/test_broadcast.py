@@ -46,7 +46,7 @@ def test_witness_update():
     c = Commit(cread_instance=Cread(nodes=[]),
                keys=[wif])
 
-    signing_key = 'DWB1111111111111111111111111111111114T1Anm'
+    signing_key = 'CREA1111111111111111111111111111111114T1Anm'
     props = {
         'account_creation_fee': '0.500 CREA',
         'maximum_block_size': 65536,

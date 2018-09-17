@@ -10,18 +10,18 @@
           "account_auths": [],
           "key_auths": [
             [
-              "DWB8MN3FNBa8WbEpxz3wGL3L1mkt6sGnncH8iuto7r8Wa3T9NSSGT",
+              "CREA8MN3FNBa8WbEpxz3wGL3L1mkt6sGnncH8iuto7r8Wa3T9NSSGT",
               1
             ]
           ]
         },
-        "memo_key": "DWB6Gkj27XMkoGsr4zwEvkjNhh4dykbXmPFzHhT8g86jWsqu3U38X",
+        "memo_key": "CREA6Gkj27XMkoGsr4zwEvkjNhh4dykbXmPFzHhT8g86jWsqu3U38X",
         "active": {
           "weight_threshold": 1,
           "account_auths": [],
           "key_auths": [
             [
-              "DWB8HCf7QLUexogEviN8x1SpKRhFwg2sc8LrWuJqv7QsmWrua6ZyR",
+              "CREA8HCf7QLUexogEviN8x1SpKRhFwg2sc8LrWuJqv7QsmWrua6ZyR",
               1
             ]
           ]
@@ -32,7 +32,7 @@
           "account_auths": [],
           "key_auths": [
             [
-              "DWB8EhGWcEuQ2pqCKkGHnbmcTNpWYZDjGTT7ketVBp4gUStDr2brz",
+              "CREA8EhGWcEuQ2pqCKkGHnbmcTNpWYZDjGTT7ketVBp4gUStDr2brz",
               1
             ]
           ]

@@ -203,7 +203,7 @@ class Configuration(DataDir):
         "limit": 10,
         "list_sorting": "trending",
         "post_category": "crea",
-        "prefix": "DWB"
+        "prefix": "CREA"
     }
 
     def __init__(self):
