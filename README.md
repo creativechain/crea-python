@@ -1,7 +1,7 @@
-# Official dPay Python Library
+# Official Crea Python Library
 
-`dpay-python` is the official dPay library for Python. It comes with a
-BIP38 encrypted wallet and a practical CLI utility called `dpaycli`.
+`crea-python` is the official Crea library for Python. It comes with a
+BIP38 encrypted wallet and a practical CLI utility called `creacli`.
 
 This library currently works on Python 2.7, 3.5 and 3.6. Python 3.3 and 3.4 support forthcoming.
 
@@ -10,14 +10,14 @@ This library currently works on Python 2.7, 3.5 and 3.6. Python 3.3 and 3.4 supp
 With pip:
 
 ```
-pip3 install dpay      # pip install dpay for 2.7
+pip3 install crea      # pip install crea for 2.7
 ```
 
 From Source:
 
 ```
-git clone https://github.com/dpays/dpay-python.git
-cd dpay-python
+git clone https://github.com/creativechain/crea-python.git
+cd crea-python
 python3 setup.py install        # python setup.py install for 2.7
 ```
 
@@ -35,14 +35,14 @@ export LDFLAGS="-L$(brew --prefix openssl)/lib $LDFLAGS"
 
 The library comes with a few console scripts.
 
-* `dpaycli`:
+* `creacli`:
     * rudimentary blockchain CLI (needs some TLC and more TLAs)
-* `dpaytail`:
-    * useful for e.g. `dpaytail -f -j | jq --unbuffered --sort-keys .`
+* `creatail`:
+    * useful for e.g. `creatail -f -j | jq --unbuffered --sort-keys .`
 
 # Documentation
 
-Documentation is available at **http://docs.dpays.io**
+Documentation is available at **http://docs.creativechain.net**
 
 # Tests
 

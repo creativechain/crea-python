@@ -8,12 +8,12 @@
         "owner": "arhag",
         "block_signing_key": "DWB5VNk9doxq55YEuyFw6qpNQt7q8neBWHhrau52fjV8N3TjNNUMP",
         "props": {
-          "account_creation_fee": "100.000 BEX",
-          "bbd_interest_rate": 1000,
+          "account_creation_fee": "100.000 CREA",
+          "cbd_interest_rate": 1000,
           "maximum_block_size": 131072
         },
         "url": " ",
-        "fee": "0.000 BEX"
+        "fee": "0.000 CREA"
       }
     ]
   ],

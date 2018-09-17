@@ -13,11 +13,11 @@ from setuptools import find_packages, setup, Command
 from setuptools.command.test import test as TestCommand
 
 # Package meta-data.
-NAME = 'dpay'
-DESCRIPTION = 'Official Python dPay library.'
-URL = 'https://github.com/dpays/dpay-python'
+NAME = 'crea'
+DESCRIPTION = 'Official Python Crea library.'
+URL = 'https://github.com/creativechain/crea-python'
 EMAIL = 'jared@benchx.io'
-AUTHOR = 'dPay DAO'
+AUTHOR = 'Crea DAO'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -133,7 +133,7 @@ setup(
     name=NAME,
     version='0.1.8',
     description=DESCRIPTION,
-    keywords=['dpay', 'dsite', 'cryptocurrency', 'blockchain'],
+    keywords=['crea', 'dsite', 'cryptocurrency', 'blockchain'],
     # long_description=long_description,
     author=AUTHOR,
     author_email=EMAIL,
@@ -141,9 +141,9 @@ setup(
     packages=find_packages(exclude=('tests','scripts')),
     entry_points={
             'console_scripts': [
-                'dpaypy=dpay.cli:legacyentry',
-                'dpaycli=dpay.cli:legacyentry',
-                'dpaytail=dpay.cli:dpaytailentry',
+                'creapy=crea.cli:legacyentry',
+                'creacli=crea.cli:legacyentry',
+                'creatail=crea.cli:creatailentry',
             ],
     },
     install_requires=REQUIRED,

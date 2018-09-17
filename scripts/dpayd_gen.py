@@ -4,7 +4,7 @@ from pprint import pprint
 
 from funcy.colls import where, pluck
 from funcy.seqs import first, distinct, flatten
-from dpay import DPay
+from crea import Crea
 
 # todo
 # "get_expiring_vesting_delegations": [('author', 'str'), ('from_time', 'object'), ('limit', 'int')],  # ?
@@ -528,8 +528,8 @@ def {method_name}(self{method_arguments}){return_hints}:
 """
 
 
-def dpayd_codegen():
-    """ Generates Python methods from dpayd JSON API spec. Prints to stdout. """
+def cread_codegen():
+    """ Generates Python methods from cread JSON API spec. Prints to stdout. """
     for endpoint in api_methods:
         method_arg_mapper = partial(map, lambda x: ', %s: %s' % (x[0], x[1]))
         call_arg_mapper = partial(map, lambda x: ', %s' % x[0])
@@ -559,13 +559,13 @@ def find_api(method_name):
         return endpoint.get('api')
 
 
-def inspect_dpayd_implementation():
-    """ Compare implemented methods with current live deployment of dpayd. """
+def inspect_cread_implementation():
+    """ Compare implemented methods with current live deployment of cread. """
     _apis = distinct(pluck('api', api_methods))
     _methods = set(pluck('method', api_methods))
 
     avail_methods = []
-    s = DPay(re_raise=False)
+    s = Crea(re_raise=False)
     for api in _apis:
         err = s.exec('nonexistentmethodcall', api=api)
         [
@@ -583,5 +583,5 @@ def inspect_dpayd_implementation():
 
 
 if __name__ == '__main__':
-    dpayd_codegen()
-    inspect_dpayd_implementation()
+    cread_codegen()
+    inspect_cread_implementation()

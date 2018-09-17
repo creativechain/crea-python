@@ -1,16 +1,16 @@
-from dpay.dpayd import DPayd
-from dpay.commit import Commit
-from dpaybase.exceptions import RPCError
+from crea.cread import Cread
+from crea.commit import Commit
+from creabase.exceptions import RPCError
 
 
 def test_transfer():
     wif = '5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3'
-    c = Commit(dpayd_instance=DPayd(nodes=[]),
+    c = Commit(cread_instance=Cread(nodes=[]),
                keys=[wif])
 
     rpc_error = None
     try:
-        c.transfer('test2', '1.000', 'BEX', 'foo', 'test')
+        c.transfer('test2', '1.000', 'CREA', 'foo', 'test')
     except RPCError as e:
         rpc_error = str(e)
     else:
@@ -21,16 +21,16 @@ def test_transfer():
 
 def test_claim_reward():
     wif = '5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3'
-    c = Commit(dpayd_instance=DPayd(nodes=[]),
+    c = Commit(cread_instance=Cread(nodes=[]),
                keys=[wif])
 
     rpc_error = None
     try:
         c.claim_reward_balance(
             account='test',
-            reward_dpay='1.000 BEX',
+            reward_crea='1.000 CREA',
             reward_vests='0.000000 VESTS',
-            reward_bbd='0.000 BBD')
+            reward_cbd='0.000 CBD')
     except RPCError as e:
         rpc_error = str(e)
     else:
@@ -43,14 +43,14 @@ def test_witness_update():
     # TODO: Remove when witness_update is fixed.
     return
     wif = '5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3'
-    c = Commit(dpayd_instance=DPayd(nodes=[]),
+    c = Commit(cread_instance=Cread(nodes=[]),
                keys=[wif])
 
     signing_key = 'DWB1111111111111111111111111111111114T1Anm'
     props = {
-        'account_creation_fee': '0.500 BEX',
+        'account_creation_fee': '0.500 CREA',
         'maximum_block_size': 65536,
-        'bbd_interest_rate': 0}
+        'cbd_interest_rate': 0}
 
     rpc_error = None
     try:

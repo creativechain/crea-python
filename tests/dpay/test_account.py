@@ -1,8 +1,8 @@
-from dpay.account import Account
+from crea.account import Account
 
 
 def test_history():
-    # TODO 1: test is disabled because d.dpays.io account history
+    # TODO 1: test is disabled because d.creativechain.net account history
     #         pruning is temporarily in place, breaking assumptions.
     # TODO 2: in addition, the current pruning implementation fails
     #         to remove the very first operation, revealing a bug in

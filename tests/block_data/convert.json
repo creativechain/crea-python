@@ -5,7 +5,7 @@
     [
       'convert',
       {
-        'amount': '5.000 BBD',
+        'amount': '5.000 CBD',
         'owner': 'summon',
         'requestid': 1467592156
       }

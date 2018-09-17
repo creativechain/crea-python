@@ -1,6 +1,6 @@
 import unittest
-from dpaybase.base58 import Base58
-from dpaybase.account import BrainKey, Address, PublicKey, \
+from creabase.base58 import Base58
+from creabase.account import BrainKey, Address, PublicKey, \
     PrivateKey, PasswordKey
 
 
@@ -303,7 +303,7 @@ class Testcases(unittest.TestCase):
             "5Hsbn6kXio4bb7eW5bX7kTp2sdkmbzP8kGWoau46Cf7en7T1RRE",
             "5K9MHEyiSye5iFL2srZu3ZVjzAZjcQxUgUvuttcVrymovFbU4cc",
             "5JBXhzDWQdYPAzRxxuGtzqM7ULLKPK7GZmktHTyF9foGGfbtDLT",
-            "5Kbbfbs6DmJFNddWiP1XZfDKwhm5dkn9KX5AENQfQke2RYBBDcz",
+            "5Kbbfbs6DmJFNddWiP1XZfDKwhm5dkn9KX5AENQfQke2RYCBDcz",
             "5JUqLwgxn8f7myNz4gDwo5e77HZgopHMDHv4icNVww9Rxu1GDG5",
             "5JNBVj5QVh86N8MUUwY3EVUmsZwChZftxnuJx22DzEtHWC4rmvK",
             "5JdvczYtxPPjQdXMki1tpNvuSbvPMxJG5y4ndEAuQsC5RYMQXuC",

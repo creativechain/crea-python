@@ -1,25 +1,25 @@
 from funcy.colls import pluck
-from dpay.dpayd import DPayd
+from crea.cread import Cread
 
 
 def test_get_version():
-    """ We should be able to call get_version on dpayd """
-    s = DPayd()
+    """ We should be able to call get_version on cread """
+    s = Cread()
     response = s.call('get_version', api='login_api')
     version = response['blockchain_version']
     assert version[0:4] == '0.19'
 
 
 def test_get_dgp():
-    """ We should be able to call get_dynamic_global_properties on dpayd """
-    s = DPayd()
+    """ We should be able to call get_dynamic_global_properties on cread """
+    s = Cread()
     response = s.call('get_dynamic_global_properties', api='database_api')
     assert response['head_block_number'] > 20e6
 
 
 def test_get_block():
     """ We should be able to fetch some blocks. """
-    s = DPayd()
+    s = Cread()
 
     for num in [1000, 1000000, 10000000, 20000000, 21000000]:
         b = s.get_block(num)
@@ -39,7 +39,7 @@ def test_get_block():
 
 def test_ensured_block_ranges():
     """ Post should load correctly if passed a dict or string identifier. """
-    s = DPayd()
+    s = Cread()
     assert list(pluck('block_num', s.get_blocks_range(1000, 2000))) == list(
         range(1000, 2000))
 

@@ -1,6 +1,6 @@
 import unittest
 
-from dpay.utils import (
+from crea.utils import (
     construct_identifier,
     sanitize_permlink,
     derive_permlink,

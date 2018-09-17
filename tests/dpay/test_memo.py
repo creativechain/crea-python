@@ -1,8 +1,8 @@
 import random
 import unittest
 
-from dpaybase import memo as Memo
-from dpaybase.account import PrivateKey
+from creabase import memo as Memo
+from creabase.account import PrivateKey
 
 
 class Testcases(unittest.TestCase):

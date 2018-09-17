@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# dpay-python documentation build configuration file, created by
+# crea-python documentation build configuration file, created by
 # sphinx-quickstart on Mon Mar  6 14:00:07 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -57,8 +57,8 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'dpay-python'
-copyright = '2018, dPay DAO'
+project = 'crea-python'
+copyright = '2018, Crea DAO'
 author = 'jared@benchx.io'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -110,7 +110,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'dpay-pythondoc'
+htmlhelp_basename = 'crea-pythondoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -136,7 +136,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'dpay-python.tex', 'dpay-python Documentation',
+    (master_doc, 'crea-python.tex', 'crea-python Documentation',
      'jared@benchx.io', 'manual'),
 ]
 
@@ -144,7 +144,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, 'dpay-python', 'dpay-python Documentation',
+man_pages = [(master_doc, 'crea-python', 'crea-python Documentation',
               [author], 1)]
 
 # -- Options for Texinfo output -------------------------------------------
@@ -153,6 +153,6 @@ man_pages = [(master_doc, 'dpay-python', 'dpay-python Documentation',
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'dpay-python', 'dpay-python Documentation', author,
-     'dpay-python', 'One line description of project.', 'Miscellaneous'),
+    (master_doc, 'crea-python', 'crea-python Documentation', author,
+     'crea-python', 'One line description of project.', 'Miscellaneous'),
 ]

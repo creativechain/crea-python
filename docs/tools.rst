@@ -1,7 +1,7 @@
 Tools
 ~~~~~
 
-``dpay-python`` comes with batteries included.
+``crea-python`` comes with batteries included.
 
 This page lists a collection of convenient tools at your disposal.
 
@@ -9,7 +9,7 @@ This page lists a collection of convenient tools at your disposal.
 Account
 =======
 
-.. autoclass:: dpay.account.Account
+.. autoclass:: crea.account.Account
    :members:
 
 --------
@@ -17,7 +17,7 @@ Account
 Amount
 ======
 
-.. autoclass:: dpay.amount.Amount
+.. autoclass:: crea.amount.Amount
    :members:
 
 --------
@@ -25,7 +25,7 @@ Amount
 Blockchain
 ==========
 
-.. autoclass:: dpay.blockchain.Blockchain
+.. autoclass:: crea.blockchain.Blockchain
    :members:
 
 --------
@@ -33,7 +33,7 @@ Blockchain
 Blog
 ====
 
-.. autoclass:: dpay.blog.Blog
+.. autoclass:: crea.blog.Blog
    :members:
 
 --------
@@ -41,7 +41,7 @@ Blog
 Converter
 =========
 
-.. autoclass:: dpay.converter.Converter
+.. autoclass:: crea.converter.Converter
    :members:
 
 --------
@@ -49,7 +49,7 @@ Converter
 Dex
 ===
 
-.. autoclass:: dpay.dex.Dex
+.. autoclass:: crea.dex.Dex
    :members:
 
 --------
@@ -57,17 +57,17 @@ Dex
 Post
 ====
 
-.. autoclass:: dpay.post.Post
+.. autoclass:: crea.post.Post
    :members:
 
 --------
 
 
 
-dpay.utils
+crea.utils
 ===========
 
-.. automodule:: dpay.utils
+.. automodule:: crea.utils
    :members:
 
 --------

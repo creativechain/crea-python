@@ -10,18 +10,18 @@ A fast ``urllib3`` based HTTP client that features:
 * Concurrent Processing
 * Automatic Node Failover
 
-The functionality of ``HttpClient`` is encapsulated by ``DPay`` class. You shouldn't be using ``HttpClient`` directly,
+The functionality of ``HttpClient`` is encapsulated by ``Crea`` class. You shouldn't be using ``HttpClient`` directly,
 unless you know exactly what you're doing.
 
-.. autoclass:: dpaybase.http_client.HttpClient
+.. autoclass:: creabase.http_client.HttpClient
    :members:
 
 -------------
 
-dpaybase
+creabase
 ---------
 
-dpaybase contains various primitives for building higher level abstractions.
+creabase contains various primitives for building higher level abstractions.
 This module should only be used by library developers or people with deep domain knowledge.
 
 **Warning:**
@@ -32,7 +32,7 @@ Not all methods are documented. Please see source.
 Account
 =======
 
-.. automodule:: dpaybase.account
+.. automodule:: creabase.account
    :members:
 
 --------
@@ -40,7 +40,7 @@ Account
 Base58
 ======
 
-.. automodule:: dpaybase.base58
+.. automodule:: creabase.base58
    :members:
 
 --------
@@ -48,7 +48,7 @@ Base58
 Bip38
 =====
 
-.. automodule:: dpaybase.bip38
+.. automodule:: creabase.bip38
    :members:
 
 
@@ -57,7 +57,7 @@ Bip38
 Memo
 ====
 
-.. automodule:: dpaybase.memo
+.. automodule:: creabase.memo
    :members:
 
 
@@ -66,7 +66,7 @@ Memo
 Operations
 ==========
 
-.. automodule:: dpaybase.operations
+.. automodule:: creabase.operations
    :members:
 
 
@@ -75,7 +75,7 @@ Operations
 Transactions
 ============
 
-.. automodule:: dpaybase.transactions
+.. automodule:: creabase.transactions
    :members:
 
 
@@ -85,7 +85,7 @@ Transactions
 Types
 =====
 
-.. automodule:: dpaybase.types
+.. automodule:: creabase.types
    :members:
 
 --------
@@ -93,5 +93,5 @@ Types
 Exceptions
 ==========
 
-.. automodule:: dpaybase.exceptions
+.. automodule:: creabase.exceptions
    :members:

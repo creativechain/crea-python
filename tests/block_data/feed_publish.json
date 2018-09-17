@@ -6,8 +6,8 @@
       "feed_publish",
       {
         "exchange_rate": {
-          "quote": "1.000 BEX",
-          "base": "0.374 BBD"
+          "quote": "1.000 CREA",
+          "base": "0.374 CBD"
         },
         "publisher": "smooth.witness"
       }

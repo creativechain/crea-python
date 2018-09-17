@@ -1,13 +1,13 @@
-from dpay.post import Post
+from crea.post import Post
 
 
 def test_post_refresh():
     """ Post should load correctly if passed a dict or string identifier. """
-    p1 = Post('https://dsite.io/marketing/@dpayblog/'
-              'marketing-a-dpay-ecosystem')
+    p1 = Post('https://dsite.io/marketing/@creablog/'
+              'marketing-a-crea-ecosystem')
     p2 = Post({
         'author': 'dsiteblog',
-        'permlink': 'marketing-a-dpay-ecosystem'
+        'permlink': 'marketing-a-crea-ecosystem'
     })
 
     # did post load?

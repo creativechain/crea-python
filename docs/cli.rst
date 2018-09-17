@@ -1,82 +1,82 @@
-dpaycli CLI
+creacli CLI
 ~~~~~~~~~~~
-`dpaycli` is a convenient CLI utility that enables you to manage your wallet, transfer funds, check
+`creacli` is a convenient CLI utility that enables you to manage your wallet, transfer funds, check
 balances and more.
 
 Using the Wallet
 ----------------
-`dpaycli` lets you leverage your BIP38 encrypted wallet to perform various actions on your accounts.
+`creacli` lets you leverage your BIP38 encrypted wallet to perform various actions on your accounts.
 
-The first time you use `dpaycli`, you will be prompted to enter a password. This password will be used to encrypt
-the `dpaycli` wallet, which contains your private keys.
+The first time you use `creacli`, you will be prompted to enter a password. This password will be used to encrypt
+the `creacli` wallet, which contains your private keys.
 
 You can change the password via `changewalletpassphrase` command.
 
 ::
 
-    dpaycli changewalletpassphrase
+    creacli changewalletpassphrase
 
 
 From this point on, every time an action requires your private keys, you will be prompted to enter
-this password (from CLI as well as while using `dpay` library).
+this password (from CLI as well as while using `crea` library).
 
 To bypass password entry, you can set an environmnet variable ``UNLOCK``.
 
 ::
 
-    UNLOCK=mysecretpassword dpaycli transfer 100 BEX <recipient>
+    UNLOCK=mysecretpassword creacli transfer 100 CREA <recipient>
 
 Common Commands
 ---------------
-First, you may like to import your dPay account:
+First, you may like to import your Crea account:
 
 ::
 
-    dpaycli importaccount
+    creacli importaccount
 
 
 You can also import individual private keys:
 
 ::
 
-   dpaycli addkey <private_key>
+   creacli addkey <private_key>
 
 Listing accounts:
 
 ::
 
-   dpaycli listaccounts
+   creacli listaccounts
 
 Show balances:
 
 ::
 
-   dpaycli balance account_name1 account_name2
+   creacli balance account_name1 account_name2
 
 Sending funds:
 
 ::
 
-   dpaycli transfer --account <account_name> 100 BEX <recipient_name> memo
+   creacli transfer --account <account_name> 100 CREA <recipient_name> memo
 
 Upvoting a post:
 
 ::
 
-   dpaycli upvote --account <account_name> https://dsite.io/funny/@jared/test-post
+   creacli upvote --account <account_name> https://dsite.io/funny/@jared/test-post
 
 
 Setting Defaults
 ----------------
-For a more convenient use of ``dpaycli`` as well as the ``dpay`` library, you can set some defaults.
-This is especially useful if you have a single dPay account.
+For a more convenient use of ``creacli`` as well as the ``crea`` library, you can set some defaults.
+This is especially useful if you have a single Crea account.
 
 ::
 
-   dpaycli set default_account jared
-   dpaycli set default_vote_weight 100
+   creacli set default_account jared
+   creacli set default_vote_weight 100
 
-   dpaycli config
+   creacli config
     +---------------------+--------+
     | Key                 | Value  |
     +---------------------+--------+
@@ -88,29 +88,29 @@ If you've set up your `default_account`, you can now send funds by omitting this
 
 ::
 
-    dpaycli transfer 100 BEX <recipient_name> memo
+    creacli transfer 100 CREA <recipient_name> memo
 
 
 Help
 ----
-You can see all available commands with ``dpaycli -h``
+You can see all available commands with ``creacli -h``
 
 ::
 
-    ~ % dpaycli -h
-    usage: dpaycli [-h] [--node NODE] [--no-broadcast] [--no-wallet] [--unsigned]
+    ~ % creacli -h
+    usage: creacli [-h] [--node NODE] [--no-broadcast] [--no-wallet] [--unsigned]
                    [--expires EXPIRES] [--verbose VERBOSE] [--version]
                    {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,convert,balance,interest,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,repost,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
                    ...
 
-    Command line tool to interact with the dPay network
+    Command line tool to interact with the Crea network
 
     positional arguments:
       {set,config,info,changewalletpassphrase,addkey,delkey,getkey,listkeys,listaccounts,upvote,downvote,transfer,powerup,powerdown,powerdownroute,convert,balance,interest,permissions,allow,disallow,newaccount,importaccount,updatememokey,approvewitness,disapprovewitness,sign,broadcast,orderbook,buy,sell,cancel,repost,follow,unfollow,setprofile,delprofile,witnessupdate,witnesscreate}
                             sub-command help
         set                 Set configuration
         config              Show local configuration
-        info                Show basic dPay blockchain info
+        info                Show basic Crea blockchain info
         changewalletpassphrase
                             Change wallet password
         addkey              Add a new key to the wallet
@@ -120,11 +120,11 @@ You can see all available commands with ``dpaycli -h``
         listaccounts        List available accounts in your wallet
         upvote              Upvote a post
         downvote            Downvote a post
-        transfer            Transfer BEX
-        powerup             Power up (vest BEX as BEX POWER)
-        powerdown           Power down (start withdrawing BEX from BEX POWER)
+        transfer            Transfer CREA
+        powerup             Power up (vest CREA as CREA POWER)
+        powerdown           Power down (start withdrawing CREA from CREA POWER)
         powerdownroute      Setup a powerdown route
-        convert             Convert BEX Dollars to BEX (takes a week to settle)
+        convert             Convert CREA Dollars to CREA (takes a week to settle)
         balance             Show the balance of one more more accounts
         interest            Get information about interest payment
         permissions         Show permissions of an account
@@ -140,8 +140,8 @@ You can see all available commands with ``dpaycli -h``
                             required keys
         broadcast           broadcast a signed transaction
         orderbook           Obtain orderbook of the internal market
-        buy                 Buy BEX or BBD from the internal market
-        sell                Sell BEX or BBD from the internal market
+        buy                 Buy CREA or CBD from the internal market
+        sell                Sell CREA or CBD from the internal market
         cancel              Cancel order in the internal market
         repost             Repost an existing post
         follow              Follow another account
@@ -153,8 +153,8 @@ You can see all available commands with ``dpaycli -h``
 
     optional arguments:
       -h, --help            show this help message and exit
-      --node NODE           URL for public dPay API (default:
-                            "https://dpayd.dpays.io")
+      --node NODE           URL for public Crea API (default:
+                            "https://cread.creativechain.net")
       --no-broadcast, -d    Do not broadcast anything
       --no-wallet, -p       Do not load the wallet
       --unsigned, -x        Do not try to sign the transaction

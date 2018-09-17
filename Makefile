@@ -1,5 +1,5 @@
 PROJECT := $(shell basename $(shell pwd))
-PYTHON_FILES := dpay dpaybase tests setup.py
+PYTHON_FILES := crea creabase tests setup.py
 
 .PHONY: clean test fmt install
 

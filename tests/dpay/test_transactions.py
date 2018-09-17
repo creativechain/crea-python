@@ -1,12 +1,12 @@
 import unittest
 from binascii import hexlify
 from pprint import pprint
-from dpaybase.account import PrivateKey
-from dpaybase.transactions import SignedTransaction
-from dpaybase import operations
+from creabase.account import PrivateKey
+from creabase.transactions import SignedTransaction
+from creabase import operations
 from collections import OrderedDict
-from dpay.utils import compat_bytes, compat_chr
-import dpay as stm
+from crea.utils import compat_bytes, compat_chr
+import crea as stm
 
 wif = "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
 ref_block_num = 34294
@@ -18,7 +18,7 @@ class Testcases(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super(Testcases, self).__init__(*args, **kwargs)
         self.maxDiff = None
-        self.dpay = stm.DPay()
+        self.crea = stm.Crea()
 
     def test_Comment(self):
         op = operations.Comment(
@@ -39,7 +39,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -64,9 +64,9 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
-        tx.verify([PrivateKey(wif).pubkey], chain=self.dpay.chain_params)
+        tx.verify([PrivateKey(wif).pubkey], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -82,7 +82,7 @@ class Testcases(unittest.TestCase):
                 'creator':
                 'jared',
                 'fee':
-                '10.000 BEX',
+                '10.000 CREA',
                 'json_metadata':
                 '',
                 'memo_key':
@@ -135,7 +135,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -160,7 +160,7 @@ class Testcases(unittest.TestCase):
         op = operations.Transfer(**{
             "from": "foo",
             "to": "baar",
-            "amount": "111.110 BEX",
+            "amount": "111.110 CREA",
             "memo": "Fooo"
         })
         ops = [operations.Operation(op)]
@@ -169,7 +169,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -184,7 +184,7 @@ class Testcases(unittest.TestCase):
         op = operations.TransferToVesting(**{
             "from": "foo",
             "to": "baar",
-            "amount": "111.110 BEX",
+            "amount": "111.110 CREA",
         })
         ops = [operations.Operation(op)]
         tx = SignedTransaction(
@@ -192,7 +192,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -213,7 +213,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -229,7 +229,7 @@ class Testcases(unittest.TestCase):
             **{
                 "from": "testuser",
                 "to": "testuser",
-                "amount": "1.000 BEX",
+                "amount": "1.000 CREA",
                 "memo": "testmemo",
             })
         ops = [operations.Operation(op)]
@@ -238,7 +238,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -255,7 +255,7 @@ class Testcases(unittest.TestCase):
                 "from": "testuser",
                 "request_id": 9001,
                 "to": "testser",
-                "amount": "100.000 BBD",
+                "amount": "100.000 CBD",
                 "memo": "memohere",
             })
         ops = [operations.Operation(op)]
@@ -264,7 +264,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -286,7 +286,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -301,8 +301,8 @@ class Testcases(unittest.TestCase):
             **{
                 "owner": "",
                 "orderid": 0,
-                "amount_to_sell": "0.000 BEX",
-                "min_to_receive": "0.000 BEX",
+                "amount_to_sell": "0.000 CREA",
+                "min_to_receive": "0.000 CREA",
                 "fill_or_kill": False,
                 "expiration": "2016-12-31T23:59:59"
             })
@@ -312,7 +312,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c8045701050000000000000000000000000003535"
@@ -374,7 +374,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c80457010a0973747265656d69616e01010000"
@@ -407,7 +407,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
@@ -428,7 +428,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c804570106003cac20000001206c9888d0c2c3"
@@ -451,7 +451,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c804570114057865726f63057865726f63e803"
@@ -464,7 +464,7 @@ class Testcases(unittest.TestCase):
         op = operations.Convert(**{
             "owner": "jared",
             "requestid": 2342343235,
-            "amount": "100.000 BBD"
+            "amount": "100.000 CBD"
         })
         ops = [operations.Operation(op)]
         tx = SignedTransaction(
@@ -472,7 +472,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c804570108057865726f6343529d8ba0860100000"
@@ -498,7 +498,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
 
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c804570101000001610161012dec1f75303030307"
@@ -660,8 +660,8 @@ class Testcases(unittest.TestCase):
             **{
                 "publisher": "jared",
                 "exchange_rate": {
-                    "base": "1.000 BBD",
-                    "quote": "4.123 BEX"
+                    "base": "1.000 CBD",
+                    "quote": "4.123 CREA"
                 }
             })
         ops = [operations.Operation(op)]
@@ -670,7 +670,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c804570107057865726f63e803000000000"
                    "00003534244000000001b1000000000000003535445454d00"
@@ -689,12 +689,12 @@ class Testcases(unittest.TestCase):
                 "block_signing_key":
                 "DWB6zLNtyFVToBsBZDsgMhgjpwysYVbsQD6YhP3kRkQhANUB4w7Qp",
                 "props": {
-                    "account_creation_fee": "10.000 BEX",
+                    "account_creation_fee": "10.000 CREA",
                     "maximum_block_size": 1111111,
-                    "bbd_interest_rate": 1000
+                    "cbd_interest_rate": 1000
                 },
                 "fee":
-                "10.000 BEX",
+                "10.000 CREA",
             })
         ops = [operations.Operation(op)]
         tx = SignedTransaction(
@@ -702,7 +702,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c80457010b057865726f6308666f6f6f6f6261"
                    "720314aa202c9158990b3ec51a1aa49b2ab5d300c97b391df3be"
@@ -725,7 +725,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c80457010c057865726f630a636"
                    "861696e73717561640100011f16b43411e11f4739"
@@ -757,7 +757,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c8045701120001057865726f6306666f6c6c"
                    "6f777f5b227265626c6f67222c207b226163636f756e74223a"
@@ -776,10 +776,10 @@ class Testcases(unittest.TestCase):
                 "author":
                 "jared",
                 "permlink":
-                "dpaypy",
+                "creapy",
                 "max_accepted_payout":
-                "1000000.000 BBD",
-                "percent_dpay_dollars":
+                "1000000.000 CBD",
+                "percent_crea_dollars":
                 10000,
                 "allow_votes":
                 True,
@@ -799,7 +799,7 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
         txWire = hexlify(compat_bytes(tx)).decode("ascii")
         compare = ("f68585abf4dce7c804570113057865726f6306706973746f6e"
                    "00ca9a3b000000000353424400000000102701010100020a67"
@@ -815,9 +815,9 @@ class Testcases(unittest.TestCase):
         op = operations.CommentOptions(
             **{
                 "author": "Jared Rice Sr.",
-                "permlink": "dpaypy",
-                "max_accepted_payout": "1000000.000 BBD",
-                "percent_dpay_dollars": 10000,
+                "permlink": "creapy",
+                "max_accepted_payout": "1000000.000 CBD",
+                "percent_crea_dollars": 10000,
                 "allow_votes": True,
                 "allow_curation_rewards": True,
                 "extensions": []
@@ -828,11 +828,11 @@ class Testcases(unittest.TestCase):
             ref_block_prefix=ref_block_prefix,
             expiration=expiration,
             operations=ops)
-        tx = tx.sign([wif], chain=self.dpay.chain_params)
+        tx = tx.sign([wif], chain=self.crea.chain_params)
         tx_wire = hexlify(compat_bytes(tx)).decode("ascii")
 
         # todo
-        rpc = self.dpay.commit.wallet
+        rpc = self.crea.commit.wallet
         compare = rpc.serialize_transaction(tx.json())
 
         self.assertEqual(compare[:-130], tx_wire[:-130])

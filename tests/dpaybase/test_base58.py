@@ -1,6 +1,6 @@
 import unittest
 import re
-from dpaybase.base58 import (Base58, base58decode, base58encode,
+from creabase.base58 import (Base58, base58decode, base58encode,
                               base58CheckEncode, base58CheckDecode,
                               gphBase58CheckEncode, gphBase58CheckDecode)
 
