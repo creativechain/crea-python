@@ -58,7 +58,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'crea-python'
-copyright = '2018, Crea DAO'
+copyright = '2018, Creativechain Foundation'
 author = 'jared@benchx.io'
 
 # The version info for the project you're documenting, acts as replacement for

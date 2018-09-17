@@ -16,8 +16,8 @@ from setuptools.command.test import test as TestCommand
 NAME = 'crea'
 DESCRIPTION = 'Official Python Crea library.'
 URL = 'https://github.com/creativechain/crea-python'
-EMAIL = 'jared@benchx.io'
-AUTHOR = 'Crea DAO'
+EMAIL = 'info@creativechain.org'
+AUTHOR = 'Creativechain Foundation'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -131,7 +131,7 @@ class UploadCommand(Command):
 # Where the magic happens:
 setup(
     name=NAME,
-    version='0.1.8',
+    version='0.1.0',
     description=DESCRIPTION,
     keywords=['crea', 'dsite', 'cryptocurrency', 'blockchain'],
     # long_description=long_description,

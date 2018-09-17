@@ -28,7 +28,7 @@ class DataDir(object):
     """
 
     appname = "crea"
-    appauthor = "Crea DAO"
+    appauthor = "Creativechain Foundation"
     storageDatabase = "crea.sqlite"
 
     data_dir = user_data_dir(appname, appauthor)
